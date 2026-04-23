@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>התפריט שלנו</title>
+    <style>
+      :root {
+        --bg: #f8f7f4;
+        --card: #ffffff;
+        --text: #1e1e1e;
+        --muted: #5f5f5f;
+        --accent: #0f766e;
+        --accent-soft: #e6f5f3;
+        --border: #e7e7e7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Rubik", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      .page {
+        width: min(100%, 680px);
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .hero {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .logo {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid var(--border);
+        background: #fff;
+      }
+
+      h1 {
+        margin: 12px 0 4px;
+        font-size: 1.35rem;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .menu-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .menu-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 14px;
+      }
+
+      .menu-top {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .menu-name {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      .price {
+        color: var(--accent);
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .desc {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .section-title {
+        margin: 16px 0 10px;
+        font-size: 1rem;
+        color: var(--accent);
+        background: var(--accent-soft);
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+
+      @media (min-width: 768px) {
+        .page {
+          padding: 24px;
+        }
+
+        .menu-list {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        h1 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <img class="logo" src="./logo.png" alt="לוגו העסק" />
+        <h1>שיף בנמל</h1>
+        <p class="subtitle">ברוכים הבאים לתפריט שלנו</p>
+      </section>
+
+      <h2 class="section-title">מנות עיקריות</h2>
+      <section class="menu-list">
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">דג היום</h3>
+            <span class="price">₪79</span>
+          </div>
+          <p class="desc">מוגש עם תפוחי אדמה וסלט ירוק טרי.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">פילה סלמון</h3>
+            <span class="price">₪92</span>
+          </div>
+          <p class="desc">סלמון בתנור עם עשבי תיבול ורוטב לימון עדין.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">שווארמה דג</h3>
+            <span class="price">₪64</span>
+          </div>
+          <p class="desc">מוגש בפיתה/לאפה עם תוספות לבחירה.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">סלט טונה ים תיכוני</h3>
+            <span class="price">₪56</span>
+          </div>
+          <p class="desc">ירקות טריים, טונה, זיתים ושמן זית כתית.</p>
+        </article>
+      </section>
+
+      <h2 class="section-title">שתייה וקינוחים</h2>
+      <section class="menu-list">
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">לימונדה ביתית</h3>
+            <span class="price">₪14</span>
+          </div>
+          <p class="desc">לימונים סחוטים במקום ונענע טרייה.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">מלבי</h3>
+            <span class="price">₪24</span>
+          </div>
+          <p class="desc">קינוח קלאסי עם קוקוס ופיסטוק.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
